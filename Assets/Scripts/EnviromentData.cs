@@ -86,11 +86,12 @@ public class EnviromentData : MonoBehaviour
         UIFood.text = foodQty.ToString();
         UIWood.text = woodQty.ToString();
         UIPopulation.text = population.ToString();
+        UIMaxPopulation.text = maxPopulation.ToString();
     }
 
     void RandomizeEnemies()
     {
-        currentEnemies = (Enemies)Random.Range(0, 2); //Select a random enemy attacker
+        currentEnemies = (Enemies)Random.Range(0, 3); //Select a random enemy attacker
         foreach (GameObject enemy in enemySprites)
         {
             enemy.SetActive(false);
